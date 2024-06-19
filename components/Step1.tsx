@@ -1,5 +1,4 @@
 import React from 'react'
-import { FormData } from '../types/form'
 import { Step1Props } from '../types/form'
 
 const Step1: React.FC<Step1Props> = ({

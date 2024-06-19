@@ -1,10 +1,15 @@
-import React from "react";
-import { FormData } from "../types/form";
-import { WelcomeProps } from "../types/form";
+import React from 'react'
+import { WelcomeProps } from '../types/form'
+import { motion } from 'framer-motion'
 
 const Welcome: React.FC<WelcomeProps> = ({ nextStep }) => {
   return (
-    <div className="flex flex-col gap-2 justify-center mt-24 w-full max-w-md mx-auto bg-white border border-gray-300 rounded-md shadow-lg p-6">
+    <motion.div
+      initial={{ opacity: 0, y: -40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      className="flex flex-col gap-2 justify-center mt-24 w-full max-w-md mx-auto bg-white border border-gray-300 rounded-md shadow-lg p-6"
+    >
       <h1 className="text-xl font-bold">Welcome!</h1>
       <p>Thanks for providing your feedback - let&apos;s go</p>
       <button
@@ -16,8 +21,8 @@ const Welcome: React.FC<WelcomeProps> = ({ nextStep }) => {
       </button>
       <p className="text-center text-gray-300 text-sm"> Powered by ampswk</p>
       <div className="bg-gray-800 w-full h-1"></div>
-    </div>
-  );
-};
+    </motion.div>
+  )
+}
 
-export default Welcome;
+export default Welcome
