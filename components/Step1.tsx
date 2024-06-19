@@ -1,6 +1,6 @@
-import React from "react";
-import { FormData } from "../types/form";
-import { Step1Props } from "../types/form";
+import React from 'react'
+import { FormData } from '../types/form'
+import { Step1Props } from '../types/form'
 
 const Step1: React.FC<Step1Props> = ({
   formData,
@@ -9,8 +9,8 @@ const Step1: React.FC<Step1Props> = ({
   prevStep,
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, role: event.target.value });
-  };
+    setFormData({ ...formData, role: event.target.value })
+  }
 
   return (
     <div className="flex flex-col gap-2 justify-center mt-24 w-full max-w-md mx-auto bg-white border border-gray-300 rounded-md shadow-lg p-6">
@@ -18,11 +18,11 @@ const Step1: React.FC<Step1Props> = ({
       <p className=" mb-2">Please select one of the following options:</p>
       <form className="flex flex-col gap-2">
         {[
-          "Founder",
-          "Executive",
-          "Product Manager",
-          "Product Owner",
-          "Software Engineer",
+          'Founder',
+          'Executive',
+          'Product Manager',
+          'Product Owner',
+          'Software Engineer',
         ].map((role) => (
           <label
             key={role}
@@ -58,7 +58,7 @@ const Step1: React.FC<Step1Props> = ({
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Step1;
+export default Step1
